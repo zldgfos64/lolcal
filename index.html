@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serial Spoofer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            background-image: url('images/background.jpg'); /* Set background image */
+            background-size: cover; /* Make sure the image covers the entire screen */
+            background-position: center; /* Center the image */
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            animation: rainbow 3s infinite;
+            z-index: 10; /* Make sure it stays above the particles */
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            14% {
+                color: orange;
+            }
+
+            28% {
+                color: yellow;
+            }
+
+            42% {
+                color: green;
+            }
+
+            57% {
+                color: blue;
+            }
+
+            71% {
+                color: indigo;
+            }
+
+            85% {
+                color: violet;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .with-love {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            z-index: 10; /* Ensure it's above particles */
+        }
+
+        /* This ensures the particles container stays behind the content */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Add a container for particles -->
+    <div id="particles-js"></div>
+
+    <h1>Cal Is Gay</h1>
+    <div class="with-love">Love from, c5v ❤️</div>
+
+    <!-- Include particles.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Initialize particles.js -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#fff"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+</body>
+</html>
+
+
+
